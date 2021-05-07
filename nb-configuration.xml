@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-shared-configuration>
+    <properties xmlns="http://www.netbeans.org/ns/maven-properties-data/1">
+        <org-netbeans-modules-javascript2-requirejs.enabled>true</org-netbeans-modules-javascript2-requirejs.enabled>
+    </properties>
+</project-shared-configuration>
