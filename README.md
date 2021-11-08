@@ -19,23 +19,23 @@ java -jar InfluxExporter-1.0.jar -config C:\example\config.txt -out C:\example\o
 ```  
 ### Config example
 ```python
-\#connection data  
+#connection data  
 influx.url=http://localhost:8086  
 influx.user=user  
 influx.password=pass  
 influx.database=dbname  
 
-\#xlsx data  
+#xlsx data  
 xlsx.template_path=C:\\example\\template.xlsx  
 
-\#sql data  
+#sql data  
 sql.count=2  
 \#sql query 1  
 sql1.query=SELECT count("responseTime"), percentile("responseTime", 99.9) FROM "dbname"."autogen"."transaction" WHERE "status"='0' and time > '__start__' AND time < '__finish__' GROUP BY "name","status"  
 \#sheet name for sql query 1  
 sql1.sheet=raw1  
 
-\#sql query 2  
+#sql query 2  
 sql2.query=SELECT count("responseTime"), percentile("responseTime", 99.9) FROM "dbname"."autogen"."transaction" WHERE "status"!='0' and  time > '__start__' AND time < '__finish__' GROUP BY "name","status"  
 \#sheet name for sql query 2  
 sql2.sheet=raw2  
