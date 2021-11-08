@@ -5,17 +5,17 @@ Works with Influx v1.8 using Java 8
 
 ### Arguments
 ```bash
-***-config***		Path to config file  
-***-out***			Path to output data  
-***-debug***		More logs  
-***-times***		Start of time periods, from 1 to N  
-***-durations***	Periods durations, could be 1 or N  
-***-profiles***		Profiles in %, could be 1 or N  
-***-name***			Output xlsx file name  
+-config     Path to config file  
+-out        Path to output data  
+-debug      More logs  
+-times      Start of time periods, from 1 to N  
+-durations  Periods durations, could be 1 or N  
+-profiles		Profiles in %, could be 1 or N  
+-name       Output xlsx file name  
 ```
 
 ### Start example
-```java
+```bash
 java -jar InfluxExporter-1.0.jar -config C:\example\config.txt -out C:\example\out -debug true -times 2021-03-18T18:30:00 2021-03-18T19:00:00 -durations 01:00:00 00:30:00 -profiles 100 150.5 -name example1
 ```  
 ### Config example
