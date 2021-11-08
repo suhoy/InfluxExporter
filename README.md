@@ -10,7 +10,7 @@ Works with Influx v1.8 using Java 8
 -debug      More logs  
 -times      Start of time periods, from 1 to N  
 -durations  Periods durations, could be 1 or N  
--profiles Profiles in %, could be 1 or N  
+-profiles   Profiles in %, could be 1 or N  
 -name       Output xlsx file name  
 ```
 
