@@ -1,5 +1,5 @@
 # InfluxExporter
-Export Influx data by template and time periods
+Export Influx data by template and time periods  
 Works with Influx v1.8 using Java 8
 
 
