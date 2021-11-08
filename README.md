@@ -4,7 +4,7 @@ Works with Influx v1.8 using Java 8
 
 
 ### Arguments
-```bash
+```java
 -config     Path to config file  
 -out        Path to output data  
 -debug      More logs  
