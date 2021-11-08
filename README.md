@@ -4,6 +4,7 @@ Works with Influx v1.8 using Java 8
 
 
 ### Arguments
+```bash
 ***-config***		Path to config file  
 ***-out***			Path to output data  
 ***-debug***		More logs  
@@ -11,7 +12,7 @@ Works with Influx v1.8 using Java 8
 ***-durations***	Periods durations, could be 1 or N  
 ***-profiles***		Profiles in %, could be 1 or N  
 ***-name***			Output xlsx file name  
-
+```
 
 ### Start example
 ```java
