@@ -142,8 +142,9 @@ public class Main {
     //создание фолдера для результатов
     private static void CreatefolderFilePath(String firstTime) {
         try {
-            String folderName = Utils.getFolder();
+            //String folderName = Utils.getFolder();
             //Files.createDirectories(Paths.get(out + "\\" + folderName));
+            Files.createDirectories(Paths.get(out));
             //folderFilePath = out + "\\" + folderName + "\\" + name + "_" + firstTime + ".xlsx";
             folderFilePath = out + "\\" + name;
         } catch (Exception ex) {
