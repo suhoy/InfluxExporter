@@ -143,8 +143,9 @@ public class Main {
     private static void CreatefolderFilePath(String firstTime) {
         try {
             String folderName = Utils.getFolder();
-            Files.createDirectories(Paths.get(out + "\\" + folderName));
-            folderFilePath = out + "\\" + folderName + "\\" + name + "_" + firstTime + ".xlsx";
+            //Files.createDirectories(Paths.get(out + "\\" + folderName));
+            //folderFilePath = out + "\\" + folderName + "\\" + name + "_" + firstTime + ".xlsx";
+            folderFilePath = out + "\\" + name;
         } catch (Exception ex) {
             ex.printStackTrace();
         }
