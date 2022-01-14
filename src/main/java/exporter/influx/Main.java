@@ -46,6 +46,8 @@ public class Main {
 
     public static void main(String[] arg) {
         try {
+            System.out.println("\n==========InfluxExporter started==========");
+            
             //читаем аргументы
             ReadParams(arg);
             AnalyzeParams();
@@ -110,9 +112,12 @@ public class Main {
             }
             //пишем в эксель
             Report r = new Report(props.getProperty("xlsx.template_path"), folderFilePath, allData);
+            
+            System.out.println("\n==========InfluxExporter finished==========");
 
         } catch (Exception ex) {
             ex.printStackTrace();
+            System.out.println("\n==========InfluxExporter finished==========");
         }
     }
 
