@@ -84,9 +84,9 @@ public class Main {
                     Utils.debugMessage("\r\nperiod" + (y + 1) + "=\t" + time + " + " + duration);
                     //хттп клиент
                     OkHttpClient.Builder okHttpClientBuilder = new OkHttpClient().newBuilder()
-                            .connectTimeout(300, TimeUnit.SECONDS)
-                            .readTimeout(300, TimeUnit.SECONDS)
-                            .writeTimeout(300, TimeUnit.SECONDS);
+                            .connectTimeout(10, TimeUnit.MINUTES)
+                            .readTimeout(10, TimeUnit.MINUTES)
+                            .writeTimeout(10, TimeUnit.MINUTES);
 
                     //коннект к инфлюксу
                     influxDB = InfluxDBFactory.connect(props.getProperty("influx.url"), props.getProperty("influx.user"), props.getProperty("influx.password"), okHttpClientBuilder);
