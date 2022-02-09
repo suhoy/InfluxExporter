@@ -47,7 +47,7 @@ public class Main {
     public static void main(String[] arg) {
         try {
             System.out.println("\n==========InfluxExporter started==========");
-            
+
             //читаем аргументы
             ReadParams(arg);
             AnalyzeParams();
@@ -104,15 +104,18 @@ public class Main {
                     Utils.debugMessage("sql" + h + ".query=\t" + sql);
                     qr = influxDB.query(new Query(sql, props.getProperty("influx.database")));
                     Utils.debugMessage("sql" + h + ".result=\t" + qr.getResults().toString());
-
-                    //парсинг ответа на один запрос и занесение в список данных
-                    durationsResults.add(Utils.Parse(qr, Utils.InfluxTimeToXlsxTime(strCurrentStart), Utils.InfluxTimeToXlsxTime(strCurrentFinish), duration, profile));
+                    try {
+                        //парсинг ответа на один запрос и занесение в список данных
+                        durationsResults.add(Utils.Parse(qr, Utils.InfluxTimeToXlsxTime(strCurrentStart), Utils.InfluxTimeToXlsxTime(strCurrentFinish), duration, profile));
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
                 allData.add(props.getProperty("sql" + h + ".sheet"), durationsResults);
             }
             //пишем в эксель
             Report r = new Report(props.getProperty("xlsx.template_path"), folderFilePath, allData);
-            
+
             System.out.println("\n==========InfluxExporter finished==========");
 
         } catch (Exception ex) {
